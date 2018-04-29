@@ -10,10 +10,18 @@
   display: grid;
   grid-template-columns: repeat(3, 100px );
   grid-template-rows: repeat(3, 100px );
-  border: 2px solid mistyrose;
+  border: 2px solid black;
 }
 
 .box{
   cursor: pointer;
   border: 1px solid black;
+}
+
+.box{
+  text-align: center;
+  padding: 33px;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: Arial;
 }
