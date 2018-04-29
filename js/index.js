@@ -13,6 +13,3 @@ const Gameboard = ( ()=> {
   return {printBoard}
 
 })();
-
-let box = document.querySelector(".box");
-console.log(box.value);

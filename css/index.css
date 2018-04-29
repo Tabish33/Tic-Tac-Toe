@@ -1,0 +1,19 @@
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 100px );
+  grid-template-rows: repeat(3, 100px );
+  border: 2px solid mistyrose;
+}
+
+.box{
+  cursor: pointer;
+  border: 1px solid black;
+}
