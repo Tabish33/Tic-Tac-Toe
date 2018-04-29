@@ -60,14 +60,16 @@ const Gameboard = ( ()=> {
           box.innerHTML = "";
       })
 
-      Game.setMoves(0);
+      Game.resetMoves();
   }
 
-  return {printBoard, registerMove, gameStatus};
+  return {printBoard, registerMove, gameStatus,resetBoard};
 
 })();
 
 Gameboard.printBoard();
+
+
 
 
 const Player = (name,marker) => {
@@ -88,6 +90,9 @@ const Player = (name,marker) => {
 
 player1 = Player("Bhosidi","X");
 player2 = Player("Boy","O");
+
+
+
 
 
 const Game = ( () => {
@@ -119,11 +124,18 @@ const Game = ( () => {
       })
     }
 
-    const setMoves = (num) => {
+    const resetMoves = () => {
       moves = 0;
     }
 
-    return {move,setMoves};
+    (function resetGame(){
+      let resetBtn = document.querySelector(".resetBtn");
+      resetBtn.onclick = function(){
+        Gameboard.resetBoard();
+      }
+    })()
+
+    return {move,resetMoves};
 
 })();
 
